@@ -13,13 +13,16 @@ class SearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: getH(41),
-      width: getW(343),
-      color: ColorConst.instance.bgContainer,
-      child: TextFormField(
-        controller: _searchController,
-        decoration: inputDecor(),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        height: getH(41),
+        width: getW(343),
+        color: ColorConst.instance.bgContainer,
+        child: TextFormField(
+          controller: _searchController,
+          decoration: inputDecor(),
+        ),
       ),
     );
   }

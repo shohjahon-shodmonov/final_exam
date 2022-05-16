@@ -8,26 +8,29 @@ class HomepageHeaders extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          "Qanday darslar sizni qiziqtiradi?",
-          style: TextStyle(
-            color: ColorConst.instance.textColorPrimary,
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Qanday darslar sizni qiziqtiradi?",
+            style: TextStyle(
+              color: ColorConst.instance.textColorPrimary,
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-        Text(
-          "28 xil yo`nalishda darsliklar mavjud",
-          style: TextStyle(
-            color: ColorConst.instance.textColorSecondary,
-            fontSize: 17,
+          Text(
+            "28 xil yo`nalishda darsliklar mavjud",
+            style: TextStyle(
+              color: ColorConst.instance.textColorSecondary,
+              fontSize: 17,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
