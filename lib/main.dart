@@ -1,4 +1,5 @@
 import 'package:final_exam/core/init/splash_screen.dart';
+import 'package:final_exam/core/routes/routes.dart';
 import 'package:final_exam/screens/home/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(),
+      onGenerateRoute: Routes.instance.onGenerateRoute,
+      initialRoute: '/',
     );
   }
 }
