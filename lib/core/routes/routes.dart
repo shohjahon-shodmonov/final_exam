@@ -1,4 +1,6 @@
 import 'package:final_exam/core/init/splash_screen.dart';
+import 'package:final_exam/screens/content/content.dart';
+import 'package:final_exam/screens/courses/course.dart';
 import 'package:final_exam/screens/home/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +20,10 @@ class Routes {
         return simpleRoute(SplashScreen());
       case '/home':
         return simpleRoute(HomePage());
+      case '/course':
+        return simpleRoute(CoursePage());
+      case '/content':
+        return simpleRoute(ContentPage());
     }
   }
 

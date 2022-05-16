@@ -12,7 +12,9 @@ class CategoryBody extends StatelessWidget {
     return ListView.builder(
       itemBuilder: (context, index) {
         return InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, '/course');
+          },
           child: Container(
             margin: EdgeInsets.only(top: 8.0),
             height: getH(211),
@@ -31,8 +33,7 @@ class CategoryBody extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child:
-                      Image.asset('assets/images/uiux_dars.jpg'),
+                  child: Image.asset('assets/images/uiux_dars.jpg'),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -50,8 +51,7 @@ class CategoryBody extends StatelessWidget {
                   child: Text(
                     "Boshlang'ich darajadagilar uchun",
                     style: TextStyle(
-                      color:
-                          ColorConst.instance.textColorSecondary,
+                      color: ColorConst.instance.textColorSecondary,
                       fontSize: 15,
                     ),
                   ),
