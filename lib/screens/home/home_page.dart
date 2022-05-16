@@ -1,17 +1,14 @@
 import 'package:final_exam/core/baseview/base_view.dart';
-import 'package:final_exam/core/components/input_decor.dart';
-import 'package:final_exam/core/constants/color_const.dart';
 import 'package:final_exam/core/constants/size_config.dart';
 import 'package:final_exam/cubit/menu_cubit/menu_cubit.dart';
 import 'package:final_exam/cubit/menu_cubit/menu_state.dart';
-import 'package:final_exam/data/menu_bar_data.dart';
 import 'package:final_exam/screens/home/_widgets/home_headers.dart';
+import 'package:final_exam/screens/home/_widgets/kurslar_header.dart';
 import 'package:final_exam/screens/home/_widgets/searchbar.dart';
 import 'package:final_exam/widgets/category_body.dart';
 import 'package:final_exam/widgets/menu_bar_cont.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -41,20 +38,10 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                HomepageHeaders(),
+                const HomepageHeaders(),
                 SearchBar(searchController: _searchController),
                 MenuBarContainer(),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 15.0),
-                  child: Text(
-                    "Dizaynga oid kurslar",
-                    style: TextStyle(
-                      color: ColorConst.instance.textColorPrimary,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
+                KurslarHeader(),
                 Expanded(
                   child: CategoryBody(),
                 ),
@@ -66,3 +53,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+

@@ -10,6 +10,6 @@ class MenuBarData {
     'Dasturlash',
     'Dizayn',
     'SMM',
-    'Til kurslari'
+    'Til kurslari',
   ];
 }

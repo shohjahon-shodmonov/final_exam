@@ -25,7 +25,7 @@ class MenuBarContainer extends StatelessWidget {
 
   menuCont(BuildContext context) {
     return SizedBox(
-      height: getH(120),
+      height: getH(125),
       width: double.infinity,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
