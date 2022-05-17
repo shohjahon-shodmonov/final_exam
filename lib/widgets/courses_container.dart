@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CoursesContainer extends StatelessWidget {
-  const CoursesContainer({
-    Key? key,
-  }) : super(key: key);
+  CoursesContainer({Key? key, required this.data, required this.index}) : super(key: key);
+
+  var data;
+  int index;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class CoursesContainer extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               image: DecorationImage(
-                image: AssetImage('assets/images/ui_course.jpg'),
+                image: AssetImage(data['attributes']['img']['data']['attributes']['url']),
               ),
             ),
           ),
@@ -39,7 +40,7 @@ class CoursesContainer extends StatelessWidget {
                 children: [
                   SizedBox(
                     child: Text(
-                      "UX/UI nima? Soha haqida umumiy tushuncha.",
+                      data['attributes']['title'],
                       style: TextStyle(
                         color: ColorConst.instance.textColorPrimary,
                         fontSize: 17,
@@ -48,7 +49,7 @@ class CoursesContainer extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Abbos Xazratov",
+                    data['attributes']['author'],
                     style: TextStyle(
                       color: ColorConst.instance.textColorSecondary,
                       fontSize: 15,
@@ -59,7 +60,7 @@ class CoursesContainer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "2 kun oldin yuklandi",
+                        data['createdAt'],
                         style: TextStyle(
                           color: ColorConst.instance.textColorSecondary,
                           fontSize: 14,
